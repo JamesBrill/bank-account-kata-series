@@ -27,5 +27,17 @@ namespace BankingKataTests
 
             Assert.That(writer.ToString(), Is.EqualTo("0"));
         }
+
+        [Test]
+        public void AccountShouldDisplayCorrectBalanceAfterDeposit()
+        {
+            var account = new Account();
+            account.Deposit(new Money(1));
+
+            var writer = new StringWriter();
+            account.PrintBalance(writer);
+
+            Assert.That(writer.ToString(), Is.EqualTo("1"));
+        }
     }
 }

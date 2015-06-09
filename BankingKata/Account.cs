@@ -16,5 +16,10 @@ namespace BankingKata
         {
             writer.Write(_balance);
         }
+
+        public void Deposit(Money money)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
