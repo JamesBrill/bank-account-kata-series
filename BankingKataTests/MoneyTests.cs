@@ -22,5 +22,15 @@ namespace BankingKataTests
         {
             Assert.AreEqual(new Money(0), new Money(0));
         }
+
+        [Test]
+        public void SumOfMoniesShouldEqualSum()
+        {
+            var first = new Money(1);
+            var second = new Money(2);
+
+            var sum = first + second;
+            Assert.AreEqual(new Money(3), sum);
+        }
     }
 }

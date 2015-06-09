@@ -46,5 +46,10 @@ namespace BankingKata
         {
             return !Equals(left, right);
         }
+
+        public static Money operator +(Money left, Money right)
+        {
+            return new Money(left._value + right._value);
+        }
     }
 }
