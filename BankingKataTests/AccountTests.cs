@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,16 @@ namespace BankingKataTests
         {
             var account = new Account();
             Assert.That(() => account.Withdraw(new Money(1)), Throws.InvalidOperationException);
+        }
+
+        [Test]
+        public void NewAccountShouldDisplayZeroBalance()
+        {
+            var account = new Account();
+            var writer = new StringWriter();
+            account.PrintBalance(writer);
+
+            Assert.That(writer.ToString(), Is.EqualTo("0"));
         }
     }
 }
