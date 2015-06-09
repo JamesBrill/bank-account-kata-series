@@ -4,9 +4,11 @@ namespace BankingKata
 {
     public class Account
     {
+        private Money _balance;
+
         public void Withdraw(Money money)
         {
-            throw new NotImplementedException();
+            _balance -= money;
         }
     }
 }
