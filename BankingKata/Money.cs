@@ -51,5 +51,11 @@ namespace BankingKata
         {
             return new Money(left._value + right._value);
         }
+
+        public static Money operator -(Money left, Money right)
+        {
+            return new Money(left._value - right._value);
+        }
+
     }
 }
