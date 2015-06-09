@@ -2,7 +2,7 @@
 
 namespace BankingKata
 {
-    public class Money : IEquatable<Money>
+    public struct Money : IEquatable<Money>
     {
         private readonly int _value;
 
@@ -14,8 +14,6 @@ namespace BankingKata
 
         public bool Equals(Money other)
         {
-            if (ReferenceEquals(null, other)) return false;
-            if (ReferenceEquals(this, other)) return true;
             return _value == other._value;
         }
 
@@ -26,8 +24,6 @@ namespace BankingKata
 
         public override bool Equals(object obj)
         {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != this.GetType()) return false;
             return Equals((Money) obj);
         }
