@@ -16,5 +16,11 @@ namespace BankingKataTests
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => new Money(-1));
         }
+
+        [Test]
+        public void TwoZeroMoniesShouldBeEqual()
+        {
+            Assert.AreEqual(new Money(0), new Money(0));
+        }
     }
 }
