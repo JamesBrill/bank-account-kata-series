@@ -54,8 +54,12 @@ namespace BankingKata
 
         public static Money operator -(Money left, Money right)
         {
-            return new Money(left._value - right._value);
+            var difference = left._value - right._value;
+            if (difference < 0)
+            {
+                throw new InvalidOperationException();
+            }
+            return new Money(difference);
         }
-
     }
 }
