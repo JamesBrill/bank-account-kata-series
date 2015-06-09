@@ -38,5 +38,11 @@ namespace BankingKataTests
             var difference = first - second;
             Assert.AreEqual(new Money(1), difference);
         }
+
+        [Test]
+        public void SubtractionShouldNotAllowNegativeResult()
+        {
+            Assert.That(() => new Money(0) - new Money(1), Throws.InvalidOperationException);
+        }
     }
 }
