@@ -7,6 +7,11 @@ namespace BankingKata
     {
         private Money _balance;
 
+        public void Deposit(Money money)
+        {
+            _balance += money;
+        }
+
         public void Withdraw(Money money)
         {
             _balance -= money;
@@ -15,11 +20,6 @@ namespace BankingKata
         public void PrintBalance(TextWriter writer)
         {
             writer.Write(_balance);
-        }
-
-        public void Deposit(Money money)
-        {
-            throw new NotImplementedException();
         }
     }
 }
