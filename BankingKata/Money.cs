@@ -6,7 +6,7 @@ namespace BankingKata
     {
         public Money(int value)
         {
-            throw new NotImplementedException();
+            if (value < 0) throw new ArgumentOutOfRangeException("value", value, "Value must be non-negative");
         }
     }
 }
