@@ -12,9 +12,9 @@ namespace BankingKata
             _balance -= money;
         }
 
-        public void PrintBalance(StringWriter writer)
+        public void PrintBalance(TextWriter writer)
         {
-            throw new NotImplementedException();
+            writer.Write(_balance);
         }
     }
 }
