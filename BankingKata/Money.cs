@@ -19,6 +19,11 @@ namespace BankingKata
             return _value == other._value;
         }
 
+        public override string ToString()
+        {
+            return _value.ToString();
+        }
+
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
